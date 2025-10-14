@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aisuda/amis-editor-demo.git"
+    "url": "git+https://github.com/scutken/amis-editor-ipaas.git"
   },
   "keywords": [
     "amis",
@@ -19,11 +19,11 @@
   "author": "fex",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aisuda/amis-editor-demo/issues"
+    "url": "https://github.com/scutken/amis-editor-ipaas/issues"
   },
-  "homepage": "https://github.com/aisuda/amis-editor-demo#readme",
+  "homepage": "https://github.com/scutken/amis-editor-ipaas#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "amis": "6.11.0",
     "amis-core": "6.11.0",
     "amis-formula": "6.11.0",

@@ -9,7 +9,7 @@ export const MainStore = types
         id: `${pagIndex}`,
         path: 'hello-world',
         label: 'Hello world',
-        icon: 'fa fa-file',
+        icon: 'fas fa-file',
         schema: {
           type: 'page',
           title: 'Hello world',

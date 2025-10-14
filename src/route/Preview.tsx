@@ -29,14 +29,14 @@ export default inject('store')(
         <>
           <div className={`cxd-Layout-brandBar`}>
             <div className="cxd-Layout-brand text-ellipsis">
-              <i className="fa fa-paw"></i>
-              <span className="hidden-folded m-l-sm">AMIS 示例</span>
+              <i className="fas fa-paw"></i>
+              <span className="hidden-folded m-l-sm">IPaaS AMIS 编辑器</span>
             </div>
           </div>
           <div className={`cxd-Layout-headerBar`}>
             <div className="hidden-xs p-t-sm ml-auto px-2">
               <Button size="sm" className="m-r-xs" level="success" disabled>
-                全部导出
+                全部导出（未实现）
               </Button>
               <Button
                 size="sm"
@@ -108,7 +108,7 @@ export default inject('store')(
                   key="icon"
                   className={cx(
                     `AsideNav-itemIcon`,
-                    link.children ? 'fa fa-folder' : 'fa fa-info'
+                    link.children ? 'fas fa-folder' : 'fas fa-info'
                   )}
                 />
               );
@@ -120,7 +120,7 @@ export default inject('store')(
                   key="delete"
                   data-tooltip="删除"
                   data-position="bottom"
-                  className={'navbtn fa fa-times'}
+                  className={'navbtn fas fa-times'}
                   onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
                     confirm('确认要删除').then(confirmed => {
@@ -135,7 +135,7 @@ export default inject('store')(
                 key="edit"
                 data-tooltip="编辑"
                 data-position="bottom"
-                className={'navbtn fa fa-pencil'}
+                className={'navbtn fas fa-pencil'}
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
                   history.push(`/edit/${paths.indexOf(link.path)}`);

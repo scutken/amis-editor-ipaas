@@ -111,8 +111,7 @@ export default inject('store')(
               onClick={() => {
                 store.setPreview(!store.preview);
               }}
-            >
-              {store.preview ? '编辑' : '预览'}
+  .preview ? '编辑' : '预览'}
             </div>
             {!store.preview && (
               <div className={`header-action-btn exit-btn`} onClick={exit}>
