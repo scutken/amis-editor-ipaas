@@ -15,7 +15,7 @@ let currentIndex = -1;
 let host = `${window.location.protocol}//${window.location.host}`;
 
 // 如果在 gh-pages 里面
-if (/^\/amis-editor-demo/.test(window.location.pathname)) {
+if (/^\/amis-editor-ipaas/.test(window.location.pathname)) {
   host += '/amis-editor';
 }
 
