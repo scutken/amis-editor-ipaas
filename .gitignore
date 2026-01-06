@@ -64,4 +64,8 @@ gh-pages
 /public
 .DS_Store
 
+# Build output
+demo-*/
+dist/
+
 package-lock.json
