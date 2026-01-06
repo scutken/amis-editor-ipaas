@@ -52,8 +52,8 @@ module.exports = {
        * 将含有'/apiTest'路径的api代理到'http://api-test.com.cn'上，
        * 详细使用见 https://www.webpackjs.com/configuration/dev-server/#devserver-proxy
        */
-      '/apiTest': {
-        target: 'http://api-test.com.cn', // 不支持跨域的接口根地址
+      '/ipaasadmin': {
+        target: 'http://localhost:8083', // 不支持跨域的接口根地址
         ws: true,
         changeOrigin: true,
       },

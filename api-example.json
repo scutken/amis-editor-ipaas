@@ -1,0 +1,77 @@
+{
+  "description": "后台接口返回格式示例",
+  "apis": {
+    "getAllPages": {
+      "method": "GET",
+      "url": "/api/pages/all",
+      "description": "获取所有页面和目录配置",
+      "response": {
+        "data": [
+          {
+            "path": "hello-world",
+            "isDirectory": false,
+            "parentId": null,
+            "schema": {
+              "type": "page",
+              "title": "Hello World",
+              "body": [
+                {
+                  "type": "tpl",
+                  "tpl": "欢迎使用 AMIS 编辑器"
+                }
+              ]
+            }
+          },
+          {
+            "path": "system",
+            "isDirectory": true,
+            "parentId": null,
+            "schema": {}
+          },
+          {
+            "path": "system/user.json",
+            "isDirectory": false,
+            "parentId": "system",
+            "schema": {
+              "type": "page",
+              "title": "用户管理",
+              "body": [
+                {
+                  "type": "crud",
+                  "api": "/api/users",
+                  "columns": [
+                    {
+                      "name": "id",
+                      "label": "ID"
+                    },
+                    {
+                      "name": "name",
+                      "label": "姓名"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "path": "system/role.json",
+            "isDirectory": false,
+            "parentId": "system",
+            "schema": {
+              "type": "page",
+              "title": "角色管理",
+              "body": "角色管理页面内容"
+            }
+          }
+        ]
+      },
+      "notes": [
+        "1. path 是唯一标识，不能重复，目录不加后缀，文件以 .json 结尾",
+        "2. isDirectory 为 true 表示目录，false 表示页面",
+        "3. parentId 指向父级目录的 path，根目录为 null",
+        "4. schema 是 AMIS 页面配置，目录为空对象 {}，页面包含完整配置",
+        "5. label 和 icon 由前端自动生成，不需要后台返回"
+      ]
+    }
+  }
+}

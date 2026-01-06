@@ -1,11 +1,13 @@
-import {types, getEnv} from 'mobx-state-tree';
-export const PageStore = types
+import {types, getEnv, Instance} from 'mobx-state-tree';
+
+const PageStoreModel = types
   .model('Page', {
-    id: types.identifier,
+    path: types.identifier,  // 使用 path 作为唯一标识
     icon: '',
-    path: '',
     label: '',
-    schema: types.frozen({})
+    schema: types.frozen({}),
+    parentId: types.maybe(types.string),
+    isDirectory: types.optional(types.boolean, false) // 是否为目录
   })
   .views(self => ({}))
   .actions(self => {
@@ -18,4 +20,11 @@ export const PageStore = types
     };
   });
 
-export type IPageStore = typeof PageStore.Type;
+export const PageStore: any = types.compose(
+  PageStoreModel,
+  types.model({
+    children: types.optional(types.array(types.late((): any => PageStore)), [])
+  })
+);
+
+export type IPageStore = Instance<typeof PageStore>;
